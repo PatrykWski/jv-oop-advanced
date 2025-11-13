@@ -6,26 +6,33 @@ public class FigureSupplier {
 
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int FIGURE_COUNT = 6;
+    private static final int RANDOM_HEIGHT = 5;
+    private static final int RANDOM_NUMBER = 21;
+
+    public static int getFigureCount() {
+        return FIGURE_COUNT;
+    }
 
     public Figure getRandomFigure() {
         int index = random.nextInt(5);
-        Figure losowaFigura;
-        int losowyNumer = random.nextInt(21);
-        double losowyDouble = losowyNumer;
-        int losowaWysokosc = random.nextInt(5);
-        String kolor = colorSupplier.getRandomColor();
+        Figure randomFigure;
+        int randomNumber = random.nextInt(RANDOM_NUMBER);
+        double randomDouble = randomNumber;
+        int randomHeight = random.nextInt(RANDOM_HEIGHT);
+        String color = colorSupplier.getRandomColor();
 
         switch (index) {
-            case 0 -> losowaFigura = new Circle(losowyDouble, kolor);
-            case 1 -> losowaFigura = new Square(losowyDouble, kolor);
-            case 2 -> losowaFigura = new Rectangle(losowyDouble, losowyDouble, kolor);
-            case 3 -> losowaFigura = new RightTriangle(losowyDouble, losowyDouble, kolor);
-            case 4 -> losowaFigura = new IsoscelesTrapezoid(losowyDouble, losowyDouble,
-                    losowaWysokosc, kolor);
-            default -> losowaFigura = null;
+            case 0 -> randomFigure = new Circle(randomDouble, color);
+            case 1 -> randomFigure = new Square(randomDouble, color);
+            case 2 -> randomFigure = new Rectangle(randomDouble, randomDouble, color);
+            case 3 -> randomFigure = new RightTriangle(randomDouble, randomDouble, color);
+            case 4 -> randomFigure = new IsoscelesTrapezoid(randomDouble, randomDouble,
+                    randomHeight, color);
+            default -> randomFigure = new Circle(10, "WHITE");
         }
 
-        return losowaFigura;
+        return randomFigure;
     }
 
     public Figure getDefaultFigure() {

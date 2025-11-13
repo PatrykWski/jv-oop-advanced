@@ -6,11 +6,11 @@ public class IsoscelesTrapezoid extends Figure {
     private double height;
     private final String name = "IsoscelesTrapezoid";
 
-    public IsoscelesTrapezoid(double sideA, double sideB, double height, String kolor) {
+    public IsoscelesTrapezoid(double sideA, double sideB, double height, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
-        this.kolor = kolor;
+        this.color = color;
     }
 
     @Override
@@ -23,6 +23,6 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: " + name + ", area: " + getArea()
                 + ", firstSide: " + sideA + " units, "
                 + "secondSide: " + sideB + " units, "
-                + "color: " + kolor);
+                + "color: " + color);
     }
 }

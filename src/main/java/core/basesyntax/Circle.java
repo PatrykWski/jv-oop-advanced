@@ -4,9 +4,9 @@ public class Circle extends Figure {
     private double radius;
     private final String name = "Circle";
 
-    public Circle(double radius, String kolor) {
+    public Circle(double radius, String color) {
         this.radius = radius;
-        this.kolor = kolor;
+        this.color = color;
     }
 
     @Override
@@ -17,6 +17,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + name + ", area: " + getArea()
-                + ", radius: " + radius + ", color: " + kolor);
+                + ", radius: " + radius + ", color: " + color);
     }
 }
